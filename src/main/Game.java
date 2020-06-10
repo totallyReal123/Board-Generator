@@ -28,10 +28,16 @@ public class Game extends JFrame implements Runnable {
 
 		// Make it not resizeable (temporary)
 		this.setResizable(false);
+		
+		// Set Window Name
+		this.setTitle("Board Generator");
+		
+		// Set Window Icon
+		this.setIconImage(ImageHandler.loadImage("/images/logo.png"));
 
 		// Make the frame visible
 		this.setVisible(true);
-
+		
 		// BufferStrategy Creation
 		canvas.createBufferStrategy(3);
 
