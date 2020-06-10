@@ -9,11 +9,9 @@ import javax.swing.JFrame;
 
 public class Game extends JFrame implements Runnable {
 
-
 	private Canvas canvas = new Canvas();
 	private RenderHandler renderer;
 	private GameHandler handler;
-	private MouseEventListener mouseListener;
 
 	public Game() {
 		// Set what happens when window is closed
@@ -40,18 +38,11 @@ public class Game extends JFrame implements Runnable {
 		// Initialize renderer
 		renderer = new RenderHandler(this.getWidth(), this.getHeight());
 
-		// Instantiate MouseListener
-		mouseListener = new MouseEventListener();
-
-		// Add listener to Canvas
-		canvas.addMouseListener(mouseListener);
-		canvas.addFocusListener(mouseListener);
-
 		// Initialize game controller
 		handler = new GameHandler();
 
 		// Start game setup
-		handler.setupGame(this, this.mouseListener);
+		handler.setupGame(this);
 	}
 
 	@Override
