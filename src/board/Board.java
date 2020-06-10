@@ -42,8 +42,8 @@ public class Board extends GameObject {
 		for (int i = 0; i < this.hexPositions.length; i++) {
 			if (i != 6) {
 				// Get X and Y Coordinates
-				int x = (int) (hexPositions[i][0] * scale) + 200;
-				int y = (int) (hexPositions[i][1] * scale) + 50;
+				int x = (int) (hexPositions[i][0] * scale) + 0;
+				int y = (int) (hexPositions[i][1] * scale) + 0;
 
 				// Get type
 				int type = 0;
@@ -76,8 +76,8 @@ public class Board extends GameObject {
 				typeAmounts[type]--;
 			} else {
 				// Get X and Y Coordinates
-				int x = (int) (hexPositions[i][0] * scale) + 200;
-				int y = (int) (hexPositions[i][1] * scale) + 50;
+				int x = (int) (hexPositions[i][0] * scale) + 0;
+				int y = (int) (hexPositions[i][1] * scale) + 0;
 
 				// Set Image
 				BufferedImage hexImage = ImageHandler.loadImage("/images/hex" + fileNameKey[0] + ".png");
