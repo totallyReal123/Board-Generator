@@ -6,15 +6,6 @@ import java.util.Random;
 
 import board.Board;
 import board.Hex;
-import board.PlacePoint;
-import board.Road;
-import board.RoadPoint;
-import board.Settlement;
-import gui.DiceInfo;
-import gui.GUI;
-import gui.PlayerInfo;
-import player.LocalPlayer;
-import player.Player;
 
 public class GameHandler {
 	private Game game;
