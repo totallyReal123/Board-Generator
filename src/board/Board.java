@@ -33,7 +33,7 @@ public class Board extends GameObject {
 		Random ran = new Random();
 
 		// Setup the Hexes
-		double scale = 164;
+		double scale = 161;
 		int[] typeAmounts = { 0, 3, 3, 4, 4, 4 };
 		ArrayList<Integer> numbers = Utils
 				.intArraytoArrayList(new int[] { 2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 9, 9, 10, 10, 11, 11, 12 });
