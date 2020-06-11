@@ -62,7 +62,7 @@ public class Board extends GameObject {
 				// Modify image with number
 				Graphics imageGraphics = hexImage.getGraphics();
 
-				imageGraphics.setColor(Color.ORANGE);
+				imageGraphics.setColor(Color.MAGENTA);
 				imageGraphics.setFont(new Font("Carlito", Font.BOLD, 120));
 				String drawString = "" + number;
 				imageGraphics.drawString(drawString, hexImage.getWidth() / 2 - drawString.length() * 30,
