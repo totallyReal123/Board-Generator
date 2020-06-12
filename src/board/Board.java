@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+import main.Game;
 import main.ImageHandler;
 import utils.Utils;
 
@@ -97,7 +98,7 @@ public class Board extends GameObject {
 	}
 
 	@Override
-	public void update() {
+	public void update(Game game) {
 
 	}
 

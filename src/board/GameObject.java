@@ -2,12 +2,14 @@ package board;
 
 import java.awt.Graphics;
 
+import main.Game;
+
 public abstract class GameObject {
 	int x = 0, y = 0;
 
 	abstract void render(Graphics graphics);
 
-	abstract void update();
+	abstract void update(Game game);
 
 	public int getX() {
 		return x;

@@ -12,13 +12,14 @@ public class Game extends JFrame implements Runnable {
 	private Canvas canvas = new Canvas();
 	private RenderHandler renderer;
 	private GameHandler handler;
+	public MouseEventListener mouseListener;
 
 	public Game() {
 		// Set what happens when window is closed
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// Set frame position
-		this.setBounds(0, 0, 553, 609);
+		this.setBounds(0, 0, 553, 709);
 
 		// Put frame in the center of the screen
 		this.setLocationRelativeTo(null);
@@ -28,16 +29,23 @@ public class Game extends JFrame implements Runnable {
 
 		// Make it not resizeable (temporary)
 		this.setResizable(false);
-		
+
 		// Set Window Name
 		this.setTitle("Board Generator");
-		
+
 		// Set Window Icon
 		this.setIconImage(ImageHandler.loadImage("/images/logo.png"));
 
+		// Instantiate MouseListener
+		mouseListener = new MouseEventListener();
+
+		// Add listener to Canvas
+		canvas.addMouseListener(mouseListener);
+		canvas.addFocusListener(mouseListener);
+
 		// Make the frame visible
 		this.setVisible(true);
-		
+
 		// BufferStrategy Creation
 		canvas.createBufferStrategy(3);
 
@@ -89,7 +97,7 @@ public class Game extends JFrame implements Runnable {
 	}
 
 	public void update() {
-
+		this.handler.update(this);
 	}
 
 	public static void main(String[] args) {

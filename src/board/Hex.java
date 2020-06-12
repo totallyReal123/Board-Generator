@@ -3,6 +3,7 @@ package board;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import main.Game;
 import main.ImageHandler;
 
 /*
@@ -55,10 +56,10 @@ public class Hex extends GameObject {
 		// The divide by 4 is to make it smaller
 		graphics.drawImage(image, x, y, image.getWidth() / 4, image.getHeight() / 4, null);
 	}
-
+	
 	@Override
-	void update() {
-
+	void update(Game game) {
+		
 	}
 
 	// Methods
@@ -90,5 +91,4 @@ public class Hex extends GameObject {
 	public void setImage(BufferedImage img) {
 		this.image = img;
 	}
-
 }
